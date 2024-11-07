@@ -1,0 +1,519 @@
+/* ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ GLOBAL ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ */
+/* ﹌﹌﹌﹌﹌ Reset ﹌﹌﹌﹌﹌ */
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #EEE;
+  padding: 0px;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+  text-align: center;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+i[class*="fa-"] {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+i[class*="fa-"]:hover {
+  color: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* ﹌﹌﹌﹌﹌ Variables ﹌﹌﹌﹌﹌ */
+:root {
+  font-size: 16px;
+  --brand-color: #E82E08;
+  --black-color: #212121;
+}
+
+/* ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ UTILIDADES ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ */
+/* ﹌﹌﹌﹌﹌ Visibilidad y Flexbox ﹌﹌﹌﹌﹌ */
+.hidden {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ﹌﹌﹌﹌﹌ Margin y padding ﹌﹌﹌﹌﹌ */
+.p-y-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.m-y-32{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* ﹌﹌﹌﹌﹌ index, relative y absolute ﹌﹌﹌﹌﹌ */
+.relative {
+  position: relative;
+}
+.absolute-100 {
+  position: absolute;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.i-0{
+  z-index: 0;
+}
+.i-10{
+  z-index: 10;
+}
+.i-20{
+  z-index: 20;
+}
+.i-30{
+  z-index: 30;
+}
+
+
+/* ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ COMPONENTES ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ */
+/* ﹌﹌﹌﹌﹌ Botones ﹌﹌﹌﹌﹌ */
+/* Botón principal */
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--black-color);
+  color: var(--brand-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  height: 44px;
+}
+
+button:hover {
+  background-color: var(--brand-color);
+  color: var(--black-color);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: white;
+  color: #ff5733;
+  border: 1px solid #ff5733;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #ff5733;
+  color: white;
+}
+
+
+
+/* ﹌﹌﹌﹌﹌ Cards ﹌﹌﹌﹌﹌ */
+/* Productos */
+/*     <a href="#" class="card-producto">
+      <img src="/assets/img/procesador.jpg" alt="procesador">
+      <p class="name-producto">
+      Procesador
+      </p>
+    </a> */
+
+.card-producto {
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 290px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-producto:hover {
+  transform: scale(1.10);
+}
+
+.card-producto img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.name-producto {
+  position: absolute;
+  color: #fff;
+  bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 15;
+  text-shadow: 5px 5px 10px #ab9595;
+}
+
+.capa {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+/* ﹌﹌﹌﹌﹌ Buscador ﹌﹌﹌﹌﹌ */
+/*   <div class="container-buscador">
+    <form class="form-buscador" action="/search" method="GET">
+      <input
+        type="text"
+        class="input-buscador"
+        name="q"
+        placeholder="Search for products..."
+        aria-label="Search for products"
+      />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div> */
+
+/* Container for search form */
+.container-buscador {
+  display: flex;
+  justify-content: center;
+  min-width: 370px;
+  width: 60%;
+}
+
+/* Search form styling */
+.form-buscador {
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  background-color: var(--black-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-buscador:focus {
+  border-color: var(--brand-color);
+}
+
+/* Input buscador */
+.input-buscador {
+  background-color: rgba(0, 0, 0, 0.0);
+  pointer-events: visible;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  padding: 12px 15px;
+  outline: none;
+  caret-color: var(--brand-color);
+  flex-grow: 1;
+}
+
+.input-buscador:focus {
+  outline: none;
+  color: var(--brand-color);
+}
+
+/* boton buscador */
+.form-buscador button {
+  background-color: transparent;
+}
+
+.form-buscador button:hover {
+  color: var(--brand-color);
+}
+
+.input-buscador::placeholder {
+  color: #b5a3a3;
+  font-size: 1.1rem;
+}
+/* ﹌﹌﹌﹌﹌ Testimonios ﹌﹌﹌﹌﹌ */
+
+/* ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ LAYOUT ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ */
+/* ﹌﹌﹌﹌﹌ container ﹌﹌﹌﹌﹌ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ﹌﹌﹌﹌﹌ grid y flex ﹌﹌﹌﹌﹌ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.col-span-1 {
+  grid-column: span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4;
+}
+
+
+/* ******************************************************************** */
+/* **********SECCIONES********** */
+/* ***NAV-MENU*** */
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--brand-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.set-botones {
+  display: flex;
+  gap: 8px;
+}
+
+/* ***SUB-MENU*** */
+.sub-menu a{
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--black-color);
+}
+
+.sub-menu a:hover {
+  color: var(--brand-color);
+}
+
+.sub-menu {
+  margin: 0 auto;
+  min-width: 370px;
+  width: 60%;
+  padding: 8px;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+/* ***HERO-IMAGE*** */
+.hero__contentYcontact{
+  z-index: 20;
+  padding: 24px;
+}
+
+.form-contacto form{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 80%;
+  min-width: 280px;
+}
+
+.form-contacto form input,
+.form-contacto form textarea {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.form-contacto form textarea {
+  min-height: 15ex;
+  resize: none;
+}
+
+
+.section__hero-image {
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  display: hidden;
+  height: 70vh;
+  position: relative;
+  border-radius: 8px;
+}
+
+.hero__content {
+  position: relative;
+  width: 60ch;
+  z-index: 3;
+  color: #FFF;
+}
+
+.section__hero-image h1,
+.section__hero-image p {
+  margin: 0;
+}
+
+.hero__content h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.hero__content p {
+  font-size: 1.2rem;
+}
+
+.section__hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* ***Productos*** */
+.background-1 {
+  background-image: url('./assets/svg-background/circuit-board.svg');
+  background-color: var(--black-color);
+  color: white;
+}
+
+
+.section__productos>div {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 24px;
+
+}
+
+/* ***Testimonios*** */
+
+i[class*="fa-star"]{
+  color: var(--brand-color)
+}
+
+.section__testimonios div {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.section__testimonios article {
+  border-radius: 35px 8px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: var(--black-color);
+  color: white;
+}
+
+.section__testimonios article>div {
+  width: 100%;
+  text-align: center;
+}
+
+.section__testimonios img {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  max-width: 100px;
+  border-radius: 32px 8px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.calif-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ***FOOTER*** */
+footer{
+  background-color: var(--black-color);
+  color: white;
+  margin-top: 24px;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
+footer i{
+  font-size: 1rem;
+}
+
+/* ***Breakpoints*** */
+/* Hasta 600px - Celulares */
+@media (max-width: 600px) {
+  div[class="hero__contentYcontact grid"] {
+    grid-template-columns: 1fr;
+  }
+  div[class*="form-contacto"] {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero__content {
+    width: 100%;
+  }
+
+  .section__testimonios>div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 600px a 768px - Tablets en modo vertical */
+@media (min-width: 600px) and (max-width: 768px) {
+  /* Estilos específicos para tablets en modo vertical */
+}
+
+/* 768px a 992px - Tablets en modo horizontal y laptops pequeñas */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos específicos para tablets en modo horizontal y laptops pequeñas */
+}
+
+/* 992px a 1200px - Laptops y monitores */
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Estilos específicos para laptops y monitores */
+}
+
+/* Más de 1200px - Monitores grandes */
+@media (min-width: 1200px) {
+  /* Estilos específicos para monitores grandes */
+}

@@ -1,0 +1,1 @@
+Este proyecto es un e-commerce básico desarrollado como parte de un curso de Front-End.

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL e-commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ÍCONOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ HEADER ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+<section class="container menu">
+  <div>
+    <a class="silkscreen-bold" href="#">Mundo_Compu</a>
+  </div>
+  <div class="container-buscador">
+    <form class="form-buscador" action="/search" method="GET">
+      <input
+        type="search"
+        class="input-buscador"
+        name="q"
+        placeholder="Busca mis productos..."
+        aria-label="Buscar productos"
+      />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+  <div class="set-botones">
+    <button><i class="fa fa-user"></i>Ingresá</button>
+    <button><i class="fa fa-cart-shopping"></i></button>
+  </div>
+</section>
+<!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ Sub-menú ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+ <section class="container">
+  <div class="flex-center sub-menu">
+    <a href="http://">Procesadores</a>
+    <a href="http://">Almacenamiento</a>
+    <a href="http://">Gabinetes</a>
+    <a href="http://">Monitor</a>
+  </div>
+</section>
+<!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ Hero Image ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+<section class="container section__hero-image flex-center">
+  <img src="/assets/img/pc gaming.jpg" alt="Una computadora" srcset="">
+  <div class="capa"></div>
+  <div class="hero__contentYcontact grid">
+    <div class="hero__content col-span-2">
+      <h1>Ecommerce de PC Lorem Ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis impedit dolores repellendus fugiat modi delectus.</p>
+    </div>
+    <div class="form-contacto col-span-2">
+      <form action="https://formspree.io/f/xjkvgknq" method="POST">
+        <input type="text" value="" name="nombre" id="nombre" aria-label="Introduce tu Nombre" maxlength="16" required placeholder="Tu Nombre">
+        <input type="email" name="email" id="email" aria-label="Introducir Email" maxlength="50" required placeholder="Tu email">
+        <textarea name="mensaje" name="mensaje" id="mensaje" aria-label="Escribir mensaje" required placeholder="Escribe tu mensaje"></textarea>
+        <button type="submit" class="flex-center">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ Nuestros productos ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+  <section class="background-1 p-y-40 m-y-32">
+    <div class="i-10 container section__productos">
+      <h2 class="flex-center">Nuestros Productos</h2>
+      <div class="flex-center">
+        <a href="#" class="card-producto">
+          <div class="capa"></div>
+          <img src="/assets/img/procesador.jpg" alt="procesador">
+          <p class="name-producto">
+          Procesador
+          </p>
+        </a>
+    
+        <a href="#" class="card-producto">
+          <div class="capa"></div>
+          <img src="/assets/img/almacenamiento.jpg" alt="procesador">
+          <p class="name-producto">
+          Almacenamiento
+          </p>
+        </a>
+    
+        <a href="#" class="card-producto">
+          <div class="capa"></div>
+          <img src="/assets/img/gabinete.jpg" alt="procesador">
+          <p class="name-producto">
+          Gabinetes
+          </p>
+        </a>
+    
+        <a href="#" class="card-producto">
+          <div class="capa"></div>
+          <img src="/assets/img/monitor.jpg" alt="procesador">
+          <p class="name-producto">
+          Monitor
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="capa i-0"></div>
+  </section>
+<!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ Testimonios ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+ <section class="container section__testimonios">
+  <h2 class="flex-center">¿Qué dicen nuestros clientes?</h2>
+  <div class="grid">
+
+    <article class="col-span-3">
+      <img src="/assets/img/person-1.jpg" alt="Foto de una persona">
+      <div class="calif-text">
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p>"Está bien"</p> 
+      </div>
+    </article>
+
+    <article class="col-span-1">
+      <img src="/assets/img/person-2.jpg" alt="Foto de una persona">
+      <div class="calif-text">
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p>"Está bien"</p> 
+      </div>
+    </article>
+
+    <article class="col-span-1">
+      <img src="/assets/img/person-3.jpg" alt="Foto de una persona">
+      <div class="calif-text">
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p>"Está bien"</p> 
+      </div>
+    </article>
+
+    <article class="col-span-3">
+      <img src="/assets/img/person-4.jpg" alt="Foto de una persona">
+      <div class="calif-text">
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p>"Está bien"</p> 
+      </div>
+    </article>
+  </div>
+ </section>
+ <!-- ﹌﹌﹌﹌﹌✦•┈๑⋅⋯ Footer ⋯⋅๑┈•✦﹌﹌﹌﹌﹌ -->
+  <footer>
+    <div class="container flex-center">
+      <p>
+        Saul Rivera <i class="fa-regular fa-copyright"></i> Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
