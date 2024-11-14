@@ -1,0 +1,23 @@
+.container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ¿Por qué no se centra el container? */
+
+img {
+  min-height: 150px;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Jockey One", sans-serif;
+  font-style: normal;
+  color: #fff;
+}
+
+body {
+  background-color: #5b4444;
+}
